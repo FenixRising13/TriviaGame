@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Consider incorporating a favicon.. Maybe dice. -->
     <title>TriviaGame</title>
 
     <!-- Reset.css -->
     <link rel="stylesheet" href="assets/css/reset.css">
 
     <!-- jQuery CDN -->
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -24,27 +23,40 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
-    <!-- Links app.js -->
-    <script src="assets/javascript/app.js"></script>
-
-    <!-- Linsk style.css -->
+    <!-- Link style.css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
+    <!-- Header should be standard for each question -->
+    <header>
+        <h1>Video Game Trivia</h1>
+    </header>
 
-    <select name="" id="input${1/(\w+)/\u\1/g}" class="form-control">
-        <option value="">-- Select One --</option>
-    </select>
+    <container>
+        <img src="assets/images/nintendo.jpg" alt="Nintendo">
+        <!-- How to do this? Update the parameters through JS? Replace the container? -->
+        <!-- Populate the questions and answers from an array? -->
+        <h2>What year was the Nintendo Entertainment System released?</h2>
+        <br>
+        <button type="button" id="answer1" value="1983" class="btn btn-large btn-block btn-default">1983</button>
+        <br>
+        <button type="button" id="answer2" value="1985" class="btn btn-large btn-block btn-default">1985</button>
+        <br>
+        <button type="button" id="answer3" value="1987" class="btn btn-large btn-block btn-default">1987</button>
+        <br>
+        <button type="button" id="answer4" value="1989" class="btn btn-large btn-block btn-default">1989</button>
 
+        <!-- Footer - Standard on each question -->
+        <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+            <a class="navbar-brand" href="#">Copyright 2017 Mark Powalisz</a>
 
+        </nav>
 
-    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-        <a class="navbar-brand" href="#">Copyright 2017 Mark Powalisz</a>
-
-    </nav>
-
+        <!-- Links app.js -->
+        <script src="assets/javascript/app.js"></script>
+    </container>
 </body>
 
 </html>

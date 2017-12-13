@@ -1,0 +1,40 @@
+body {
+    /* Image from https://subtlepatterns.com */
+    background-image: url("../images/stonehaven.png");
+    
+}
+
+header {
+/* Consider looking up a new font */
+    background: grey;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    border-bottom: 3px solid black;
+}
+
+h2 {
+    margin-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 20%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    /* Each button corresponds to an answer. */
+    margin: auto;
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    width: 80%;
+}
+
+.navbar {
+    border-top: 3px solid black;
+}
