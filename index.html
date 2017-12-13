@@ -35,23 +35,31 @@
     </header>
 
     <container>
-        <img src="assets/images/nintendo.jpg" alt="Nintendo">
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        </div>
+
+        <img class="col-xs-4 col-sm-4 col-md-3 col-lg-3" src="assets/images/nintendo.jpg" alt="Nintendo">
         <!-- How to do this? Update the parameters through JS? Replace the container? -->
         <!-- Populate the questions and answers from an array? -->
-        <h2>What year was the Nintendo Entertainment System released?</h2>
-        <br>
-        <button type="button" id="answer1" value="1983" class="btn btn-large btn-block btn-default">1983</button>
-        <br>
-        <button type="button" id="answer2" value="1985" class="btn btn-large btn-block btn-default">1985</button>
-        <br>
-        <button type="button" id="answer3" value="1987" class="btn btn-large btn-block btn-default">1987</button>
-        <br>
-        <button type="button" id="answer4" value="1989" class="btn btn-large btn-block btn-default">1989</button>
+        <div id="timer" class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
 
+        </div>
+        </div>
+        <div class="row">
+            <h2>What year was the Nintendo Entertainment System released?</h2>
+            <br>
+            <button type="button" id="answer1" value="1983" class="btn btn-large btn-block btn-default">1983</button>
+            <br>
+            <button type="button" id="answer2" value="1985" class="btn btn-large btn-block btn-default">1985</button>
+            <br>
+            <button type="button" id="answer3" value="1987" class="btn btn-large btn-block btn-default">1987</button>
+            <br>
+            <button type="button" id="answer4" value="1989" class="btn btn-large btn-block btn-default">1989</button>
+        </div>
         <!-- Footer - Standard on each question -->
         <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
             <a class="navbar-brand" href="#">Copyright 2017 Mark Powalisz</a>
-
         </nav>
 
         <!-- Links app.js -->
