@@ -127,7 +127,10 @@ $(document).ready(function () {
     };
     // ------------------secondQuestion------------------
     function secondQuestion() {
-
+        $("#answer1").unbind();
+        $("#answer2").unbind();
+        $("#answer3").unbind();
+        $("#answer4").unbind();
         // Timer
         var number = 7;
 
@@ -210,6 +213,10 @@ $(document).ready(function () {
     }
     // ------------------thirdQuestion------------------
     function thirdQuestion() {
+        $("#answer1").unbind();
+        $("#answer2").unbind();
+        $("#answer3").unbind();
+        $("#answer4").unbind();
 
         // Timer
         var number = 7;
@@ -293,6 +300,10 @@ $(document).ready(function () {
     }
     // ------------------fourthQuestion------------------
     function fourthQuestion() {
+        $("#answer1").unbind();
+        $("#answer2").unbind();
+        $("#answer3").unbind();
+        $("#answer4").unbind();
 
         // Timer
         var number = 7;
@@ -375,6 +386,10 @@ $(document).ready(function () {
     }
     // ------------------Results------------------
     function result() {
+        $("#answer1").unbind();
+        $("#answer2").unbind();
+        $("#answer3").unbind();
+        $("#answer4").unbind();
 
         // Timer
         var number = 3;
