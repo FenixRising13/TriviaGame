@@ -6,6 +6,7 @@ $(document).ready(function () {
     var correctAnswers = 0;
     var wrongAnswers = 0;
     var unAnswered = 0;
+    var intervalId;
 
     // Answers
     var answer = [
@@ -33,17 +34,22 @@ $(document).ready(function () {
         "Luther Vandross"
     ];
 
+    // Stop Function
+    function stop() {
+        clearInterval(intervalId);
+    };
 
     //  ------------------Start Button/Call firstQuestion------------------
     $("#start").on("click", function () {
         firstQuestion();
     });
-    // ------------------firstQuestion Function------------------
+
+    // ------------------firstQuestion------------------
     function firstQuestion() {
 
         // Timer
-        var number = 5;
-        var intervalId;
+        var number = 7;
+
         // $("#start").remove();
         $(".img").remove();
         $("#image").append("<img class='img' src='assets/images/nintendo.jpg' alt='Nintendo'>");
@@ -57,27 +63,26 @@ $(document).ready(function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
+            firstAnswer();
+        });
         $("#answer2").on("click", function () {
             correctAnswers++;
             console.log("Correct Answers: " + correctAnswers);
             stop();
-        })
+            firstAnswer();
+        });
         $("#answer3").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
+            firstAnswer();
+        });
         $("#answer4").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
-
-        // Stop Function
-        function stop() {
-            clearInterval(intervalId);
-        };
+            firstAnswer();
+        });
 
         function startTimer() {
             $(".panel-body").text(number);
@@ -89,18 +94,44 @@ $(document).ready(function () {
                     unAnswered++;
                     console.log("unAnswered: " + unAnswered);
                     stop();
-                    secondQuestion();
+                    firstAnswer();
+                    // secondQuestion();
                 };
             };
         };
         startTimer();
     };
-    // ------------------secondQuestion Function------------------
+    // firstAnswer------------------
+    function firstAnswer() {
+        $("h2").html("The correct answer was:");
+        $("#answer1").text("");
+        $("#answer2").text(answer[1]);
+        $("#answer3").text("");
+        $("#answer4").text("");
+
+        // Timer
+        var number = 3;
+
+        function startTimer() {
+            $(".panel-body").text(number);
+            intervalId = setInterval(decrement, 1000);
+            function decrement() {
+                number--;
+                $(".panel-body").text(number);
+                if (number === 0) {
+                    stop();
+                    secondQuestion();
+                };
+            };
+        };
+        startTimer();
+
+    };
+    // ------------------secondQuestion------------------
     function secondQuestion() {
 
         // Timer
-        var number = 5;
-        var intervalId;
+        var number = 7;
 
         $(".img").remove();
         $("#image").append("<img class='img' src=assets/images/pokemon.jpg alt='Pokemon'>");
@@ -114,29 +145,29 @@ $(document).ready(function () {
             correctAnswers++;
             console.log("Correct Answers: " + correctAnswers);
             stop();
-        })
+            secondAnswer();
+        });
 
         $("#answer2").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
+            secondAnswer();
+        });
 
         $("#answer3").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
+            secondAnswer();
+        });
 
         $("#answer4").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
-
-        function stop() {
-            clearInterval(intervalId);
-        };
+            secondAnswer();
+        });
 
         function startTimer() {
             $(".panel-body").text(number);
@@ -148,19 +179,44 @@ $(document).ready(function () {
                     unAnswered++;
                     console.log("unAnswered: " + unAnswered);
                     stop();
-                    thirdQuestion();
+                    secondAnswer();
                 };
             };
         };
         startTimer();
 
     };
-    // ------------------thirdQuestion Function------------------
+    // secondAnswer------------------
+    function secondAnswer() {
+        $("h2").html("The correct answer was:");
+        $("#answer1").text(answer2[0]);
+        $("#answer2").text("");
+        $("#answer3").text("");
+        $("#answer4").text("");
+
+        // Timer
+        var number = 3;
+
+        function startTimer() {
+            $(".panel-body").text(number);
+            intervalId = setInterval(decrement, 1000);
+            function decrement() {
+                number--;
+                $(".panel-body").text(number);
+                if (number === 0) {
+                    stop();
+                    thirdQuestion();
+                };
+            };
+        };
+        startTimer();
+
+    }
+    // ------------------thirdQuestion------------------
     function thirdQuestion() {
 
         // Timer
-        var number = 5;
-        var intervalId;
+        var number = 7;
 
         $(".img").remove();
         $("#image").append("<img class='img' src=assets/images/smb2.png alt='SMB2'>");
@@ -174,29 +230,29 @@ $(document).ready(function () {
             correctAnswers++;
             console.log("Correct Answers: " + correctAnswers);
             stop();
-        })
+            thirdAnswer();
+        });
 
         $("#answer2").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
+            thirdAnswer();
+        });
 
         $("#answer3").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
+            thirdAnswer();
+        });
 
         $("#answer4").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
-
-        function stop() {
-            clearInterval(intervalId);
-        };
+            thirdAnswer();
+        });
 
         function startTimer() {
             $(".panel-body").text(number);
@@ -208,19 +264,44 @@ $(document).ready(function () {
                     unAnswered++;
                     console.log("unAnswered: " + unAnswered);
                     stop();
-                    fourthQuestion();
+                    thirdAnswer();
                 };
             };
         };
         startTimer();
 
     };
-    // ------------------fourthQuestion Function------------------
+    // thirdAnswer------------------
+    function thirdAnswer() {
+        $("h2").html("The correct answer was:");
+        $("#answer1").text(answer3[0]);
+        $("#answer2").text("");
+        $("#answer3").text("");
+        $("#answer4").text("");
+
+        // Timer
+        var number = 3;
+
+        function startTimer() {
+            $(".panel-body").text(number);
+            intervalId = setInterval(decrement, 1000);
+            function decrement() {
+                number--;
+                $(".panel-body").text(number);
+                if (number === 0) {
+                    stop();
+                    fourthQuestion();
+                };
+            };
+        };
+        startTimer();
+
+    }
+    // ------------------fourthQuestion------------------
     function fourthQuestion() {
 
         // Timer
-        var number = 5;
-        var intervalId;
+        var number = 7;
 
         $(".img").remove();
         $("#image").append("<img class='img' src=assets/images/fzero.jpg alt='fZero'>");
@@ -234,29 +315,29 @@ $(document).ready(function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
+            fourthAnswer();
+        });
 
         $("#answer2").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
+            fourthAnswer();
+        });
 
         $("#answer3").on("click", function () {
             correctAnswers++;
             console.log("Correct Answers: " + correctAnswers);
             stop();
-        })
+            fourthAnswer();
+        });
 
         $("#answer4").on("click", function () {
             wrongAnswers++;
             console.log("Wrong Answers: " + wrongAnswers);
             stop();
-        })
-
-        function stop() {
-            clearInterval(intervalId);
-        };
+            fourthAnswer();
+        });
 
         function startTimer() {
             $(".panel-body").text(number);
@@ -268,26 +349,22 @@ $(document).ready(function () {
                     unAnswered++;
                     console.log("unAnswered: " + unAnswered);
                     stop();
-                    result();
+                    fourthAnswer();
                 };
             };
         };
         startTimer();
     };
-    // Results Function
-    function result() {
+    // fourthAnswer------------------
+    function fourthAnswer() {
+        $("h2").html("The correct answer was:");
+        $("#answer1").text("");
+        $("#answer2").text("");
+        $("#answer3").text(answer4[2]);
+        $("#answer4").text("");
 
         // Timer
-        var number = 5;
-        var intervalId;
-
-        $("#answer4").remove();
-
-        $("h2").html("Results");
-        $("#answer1").html("Correct: " + correctAnswers);
-        $("#answer2").html("Wrong: " + wrongAnswers);
-        $("#answer3").html("UnAnswered: " + unAnswered);
-
+        var number = 3;
 
         function startTimer() {
             $(".panel-body").text(number);
@@ -295,20 +372,53 @@ $(document).ready(function () {
             function decrement() {
                 number--;
                 $(".panel-body").text(number);
-                if (unAnswered === 4) {
-                    alert("Were you planning on answering those?")
-                }
-                else if (correctAnswers < wrongAnswers) {
-                    alert("What year were you born? \n Better luck next time");
-                }
-                else if (correctAnswers === 4) {
-                    alert("Great job... nerd.");
+                if (number === 0) {
+                    stop();
+                    result();
                 };
             };
-
         };
+        startTimer();
+
+    }
+    // ------------------Results------------------
+    function result() {
+
+        // Timer
+        var number = 3;
+        // Changes h2 and updates button text with usersResults
+        $("h2").html("Results");
+        $("#answer1").html("Correct: " + correctAnswers);
+        $("#answer2").html("Wrong: " + wrongAnswers);
+        $("#answer3").html("UnAnswered: " + unAnswered);
+        $("#answer4").html("");
+
+        function startTimer() {
+            $(".panel-body").text(number);
+            intervalId = setInterval(decrement, 1000);
+            function decrement() {
+                number--;
+                $(".panel-body").text(number);
+                if (number === 0) {
+                    stop();
+                    if (unAnswered === 4) {
+                        alert("Were you planning on answering those?");
+                    }
+                    else if (correctAnswers < wrongAnswers) {
+                        alert("What year were you born? \n Better luck next time");
+                    }
+                    else if (correctAnswers === 4) {
+                        alert("Great job... nerd.");
+                    };
+                };
+            };
+        };
+        startTimer();
 
     };
+
 });
+
+
 
 

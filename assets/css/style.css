@@ -20,7 +20,7 @@ h2 {
 
 img {
     /* display: block; */
-    margin: auto;
+    margin-left: 40px;
     width: 200px;
     margin-top: 15px;
     margin-bottom: 15px;
