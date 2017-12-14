@@ -14,7 +14,7 @@ header {
 }
 
 h2 {
-    margin-left: 20px;
+    margin-left: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
@@ -28,6 +28,7 @@ img {
 
 .panel-body {
     font-size: 20px;
+    float: right;
 }
 
 .btn {
