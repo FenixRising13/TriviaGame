@@ -23,11 +23,12 @@ img {
     margin-left: 100px;
     width: 200px;
     margin-top: 15px;
-    margin-bottom: 10px;
 }
 
 #start {
     margin-left:30px;
+    margin-top:5px;
+    background: green;
 }
 
 .panel {
