@@ -113,11 +113,9 @@ $(document).ready(function () {
         var number = 3;
 
         function startTimer() {
-            $(".panel-body").text(number);
             intervalId = setInterval(decrement, 1000);
             function decrement() {
                 number--;
-                $(".panel-body").text(number);
                 if (number === 0) {
                     stop();
                     secondQuestion();
@@ -198,11 +196,9 @@ $(document).ready(function () {
         var number = 3;
 
         function startTimer() {
-            $(".panel-body").text(number);
             intervalId = setInterval(decrement, 1000);
             function decrement() {
                 number--;
-                $(".panel-body").text(number);
                 if (number === 0) {
                     stop();
                     thirdQuestion();
@@ -283,11 +279,9 @@ $(document).ready(function () {
         var number = 3;
 
         function startTimer() {
-            $(".panel-body").text(number);
             intervalId = setInterval(decrement, 1000);
             function decrement() {
                 number--;
-                $(".panel-body").text(number);
                 if (number === 0) {
                     stop();
                     fourthQuestion();
@@ -367,11 +361,9 @@ $(document).ready(function () {
         var number = 3;
 
         function startTimer() {
-            $(".panel-body").text(number);
             intervalId = setInterval(decrement, 1000);
             function decrement() {
                 number--;
-                $(".panel-body").text(number);
                 if (number === 0) {
                     stop();
                     result();
@@ -394,11 +386,9 @@ $(document).ready(function () {
         $("#answer4").html("");
 
         function startTimer() {
-            $(".panel-body").text(number);
             intervalId = setInterval(decrement, 1000);
             function decrement() {
                 number--;
-                $(".panel-body").text(number);
                 if (number === 0) {
                     stop();
                     if (unAnswered === 4) {

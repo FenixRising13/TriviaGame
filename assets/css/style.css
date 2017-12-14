@@ -15,15 +15,23 @@ header {
 
 h2 {
     /* This is the question */
-    margin-left: 30px;
+    margin-left: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 img {
-    margin-left: 40px;
+    margin-left: 100px;
     width: 200px;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+#start {
+    margin-left:30px;
+}
+
+.panel {
+    margin-left:30px;
 }
 
 .panel-body {
