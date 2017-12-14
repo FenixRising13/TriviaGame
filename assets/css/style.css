@@ -26,6 +26,10 @@ img {
     margin-bottom: 15px;
 }
 
+.panel-body {
+    font-size: 20px;
+}
+
 .btn {
     /* Each button corresponds to an answer. */
     margin: auto;
