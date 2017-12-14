@@ -95,7 +95,6 @@ $(document).ready(function () {
                     console.log("unAnswered: " + unAnswered);
                     stop();
                     firstAnswer();
-                    // secondQuestion();
                 };
             };
         };
