@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     // ------------------firstQuestion------------------
     function firstQuestion() {
-        
+
         // Timer
         var number = 7;
 
@@ -410,7 +410,7 @@ $(document).ready(function () {
                         alert("Were you planning on answering those?");
                     }
                     else if (correctAnswers < wrongAnswers) {
-                        alert("What year were you born? \n Better luck next time");
+                        alert("What year were you born? \n \n Better luck next time");
                     }
                     else if (correctAnswers === 4) {
                         alert("Great job... nerd.");
