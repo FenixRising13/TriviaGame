@@ -50,8 +50,9 @@ $(document).ready(function () {
         // Timer
         var number = 7;
 
-        // $("#start").remove();
+        // Remove image ~ useful when game starts over
         $(".img").remove();
+        // Update image div with new image
         $("#image").append("<img class='img' src='assets/images/nintendo.jpg' alt='Nintendo'>");
         $("h2").html("What year was the Nintendo Entertainment System released?");
         $("#answer1").text(answer[0]);
@@ -83,7 +84,7 @@ $(document).ready(function () {
             stop();
             firstAnswer();
         });
-
+        // startTimer for Question 1
         function startTimer() {
             $(".panel-body").text(number);
             intervalId = setInterval(decrement, 1000);
