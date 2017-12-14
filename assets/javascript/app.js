@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     // ------------------firstQuestion------------------
     function firstQuestion() {
-
+        
         // Timer
         var number = 7;
 
