@@ -1,54 +1,47 @@
 body {
-    /* Image from https://subtlepatterns.com */
-    background-image: url("../images/stonehaven.png");
-    
+  /* Image from https://subtlepatterns.com */
+  background-image: url("../images/stonehaven.png");
+
 }
 
 header {
-/* Consider looking up a new font */
-    background: grey;
-    text-align: center;
-    color: black;
-    padding: 3px;
-    border-bottom: 3px solid black;
+  /* Consider looking up a new font */
+  background: grey;
+  text-align: center;
+  color: black;
+  padding: 3px;
+  border-bottom: 3px solid black;
 }
 
 h2 {
-    /* This is the question */
-    margin-left: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  /* This is the question */
+  margin-left: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 img {
-    margin-left: 100px;
-    width: 200px;
-    margin-top: 15px;
+  margin-left: 100px;
+  width: 200px;
+  margin-top: 15px;
 }
 
-#start {
-    margin-left:30px;
-    margin-top:5px;
-    background: green;
-}
-
-.panel {
-    margin-left:30px;
-}
-
-.panel-body {
-    font-size: 20px;
+.card-text {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .btn {
-    /* Each button corresponds to an answer. */
-    margin: auto;
-    background-color: blue;
-    color: white;
-    border: 2px solid black;
-    width: 80%;
+  /* Each button corresponds to an answer. */
+  margin: auto;
+  border: 2px solid black;
+  width: 80%;
 }
 
-.navbar {
-    height: 4px;
-    border-top: 2px solid black;
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 5%;
+  width: 100%;
+  border-top: 2px solid black;
+  background: white;
 }
