@@ -1,7 +1,6 @@
 body {
   /* Image from https://subtlepatterns.com */
   background-image: url("../images/stonehaven.png");
-
 }
 
 header {
@@ -13,26 +12,21 @@ header {
   border-bottom: 3px solid black;
 }
 
-h2 {
-  /* This is the question */
-  margin-left: 50px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+.container {
+  height: 100%;
 }
 
-img {
-  margin-left: 100px;
-  width: 200px;
-  margin-top: 15px;
+.card-body {
+  padding: 10px;
 }
 
 .card-text {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .btn {
   /* Each button corresponds to an answer. */
-  margin: auto;
   border: 2px solid black;
   width: 80%;
 }
@@ -42,6 +36,7 @@ img {
   bottom: 0;
   height: 5%;
   width: 100%;
+  margin-top: 2%;
   border-top: 2px solid black;
   background: white;
 }
